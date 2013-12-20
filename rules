@@ -71,9 +71,7 @@ config.status.full: config.env.full config.sub config.guess
 	    --with-debug \
 	    --with-http_addition_module \
 	    --with-http_dav_module \
-	    --with-http_geoip_module \
 	    --with-http_gzip_static_module \
-	    --with-http_image_filter_module \
 	    --with-http_realip_module \
 	    --with-http_stub_status_module \
 	    --with-http_ssl_module \
@@ -82,6 +80,7 @@ config.status.full: config.env.full config.sub config.guess
 	    --with-ipv6 \
 	    --with-mail \
 	    --with-mail_ssl_module \
+	    --add-module=$(MODULESDIR)/nginx-upload-module \
 	    --add-module=$(MODULESDIR)/nginx-auth-pam \
 	    --add-module=$(MODULESDIR)/nginx-dav-ext-module \
 	    --add-module=$(MODULESDIR)/nginx-echo \
@@ -139,9 +138,7 @@ config.status.extras: config.env.extras config.sub config.guess
 	    --with-http_addition_module \
 	    --with-http_dav_module \
 	    --with-http_flv_module \
-	    --with-http_geoip_module \
 	    --with-http_gzip_static_module \
-	    --with-http_image_filter_module \
 	    --with-http_mp4_module \
 	    --with-http_perl_module \
 	    --with-http_random_index_module \
@@ -163,7 +160,6 @@ config.status.extras: config.env.extras config.sub config.guess
 	    --add-module=$(MODULESDIR)/nginx-echo \
 	    --add-module=$(MODULESDIR)/ngx-fancyindex \
 	    --add-module=$(MODULESDIR)/nginx-http-push \
-	    --add-module=$(MODULESDIR)/nginx-lua \
 	    --add-module=$(MODULESDIR)/nginx-upload-progress \
 	    --add-module=$(MODULESDIR)/nginx-upstream-fair \
 	    --add-module=$(MODULESDIR)/ngx_http_substitutions_filter_module \
