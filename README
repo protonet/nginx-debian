@@ -1,0 +1,6 @@
+wget http://archive.ubuntu.com/ubuntu/pool/universe/n/nginx/nginx_1.4.1.orig.tar.gz
+tar xzvf nginx_1.4.1.orig.tar.gz
+cd nginx_1.4*
+hub clone protonet/nginx-debian debian
+sudo apt-get -y install devscripts debhelper libperl-dev
+debuild -i -us -uc -b
